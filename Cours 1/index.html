@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- titre de la page -->
+    <title>Cours HTML de zéro</title>
+    <!-- icone de l'onglet -->
+    <link rel="shortcut icon" href="/logo-head.png" />
+  </head>
+  <body>
+    <nav>
+      <!-- UL = Unordered List -->
+      <ul>
+        <li>Acceuil</li>
+        <li>Boutique</li>
+        <li>
+          <a href="#form">Forumlaire</a>
+        </li>
+      </ul>
+    </nav>
+    <header>
+      <!-- Un seul h1 par page -->
+      <h1>Ceci est le titre principal</h1>
+      <p>Coucou <em> Italique</em> <strong>Gras</strong></p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque amet
+        expedita nam aliquam repellendus natus consequuntur architecto
+        reiciendis impedit, iusto quam voluptates vel ducimus nobis odit,
+        eveniet eligendi? Accusamus, qui!
+      </p>
+    </header>
+
+    <main>
+      <section>
+        <h2>Ordered list</h2>
+        <ol>
+          <li>Ceci est une</li>
+          <li>liste dans</li>
+          <li>l'ordre</li>
+        </ol>
+      </section>
+
+      <section>
+        <h3>Image en HTML</h3>
+        <img
+          src="/PP.jpg"
+          height="200"
+          alt="Un kaméhaméha dans le style Vanghog"
+        />
+        <!-- L'alt de l'image est pour l'accessibilité (Non-voyant par exemple) -->
+
+        <div>
+          <h4>Tableau</h4>
+          <table
+            border="4"
+            cellpadding="10"
+            cellspacing="4"
+            style="text-align: center"
+          >
+            <thead>
+              <tr>
+                <th>Col 1</th>
+                <th>Col 2</th>
+                <th>Col 3</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="2">Cell 1</td>
+                <td>Cell 2</td>
+                <td>Cell 3</td>
+              </tr>
+              <tr>
+                <td colspan="2">Cell 4</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <h5><i>&#8593;</i>Les liens</h5>
+          <a href="https://htmlcheatsheet.com" target="_blank"
+            >HTML Cheat Sheet</a
+          >
+        </div>
+        <div>
+          <h6><span>&#128190;</span>Vidéos</h6>
+          <video src="/Vidéo.mp4" height="200" autoplay muted loop></video>
+        </div>
+      </section>
+      <section id="form">
+        <h2>Les formulaires</h2>
+        <form action="">
+          <!-- for et id permettent de lier le label à l'input -->
+          <label for="name">Nom</label>
+          <input type="text" id="name" placeholder="Entrez votre nom" />
+          <br />
+          <label for="age">Age</label>
+          <input
+            type="number"
+            id="age"
+            placeholder="Entre votre age"
+            value="18"
+          />
+          <br />
+          <label for="gender">Genre</label>
+          <select id="gender">
+            <option value="Homme">Homme</option>
+            <option selected="selected" value="Femmme">Femme</option>
+            <option value="Autre">Autre</option>
+          </select>
+          <div>
+            <!-- Le "name" permet de connecter les éléments (pour ne pas check plusieurs input) -->
+            <input type="radio" name="type" id="human" checked />
+            <label for="human">Humain</label>
+
+            <input type="radio" name="type" id="dog" />
+            <label for="dog">Chien</label>
+
+            <input type="radio" name="type" id="Cat" />
+            <label for="Cat">Chat</label>
+          </div>
+          <textarea
+            placeholder="Votre message..."
+            cols="20"
+            rows="5"
+          ></textarea>
+          <br />
+          <!-- Input de type checkbox -->
+          <input type="checkbox" id="cgv" />
+          <label for="cgv">Accepter les conditions générale</label>
+          <br />
+          <input type="submit" value="Valider" />
+          <!-- L'input de type "submit" est connectée à l'action du formulaire (l'action du formulaire envoie les informations à l'endroit voulu), c'est en ça qu'elle se différencie d'un boutton normal -->
+        </form>
+        <button>Ceci est un boutton</button>
+      </section>
+    </main>
+    <!-- Mail et envoi de fichier -->
+    <footer>
+      <a href="mailto:mesasebastien@outlook.fr">Contactez moi !</a>
+      <a href="/notice.txt" download="Notice">Télécharger la notice</a>
+    </footer>
+  </body>
+</html>
